@@ -1,52 +1,57 @@
-/* Reset some default spacing */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* style.css - updated */
+
+/* Reset */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  height: 100%;
 }
 
 body {
-  height: 100vh;
+  min-height: 100vh;               /* full viewport height */
+  display: flex;
+  flex-direction: column;          /* stack header / time / buttons / footer */
+  align-items: center;             /* center horizontally */
+  justify-content: center;         /* center vertically (but footer will push down) */
   background-color: black;
   color: white;
   font-family: Calibri, sans-serif;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;      /* centers horizontally */
-  justify-content: center;  /* centers vertically */
   text-align: center;
+}
+
+/* Make the main content block not get pushed away by footer */
+h1, .time, .btn {
+  /* center these children horizontally; vertical centering is handled by body */
+  align-self: center;
 }
 
 /* Title */
 h1 {
   font-size: 60px;
-  font-weight: 1000;
+  font-weight: 900;
   margin-bottom: 30px;
 }
 
 /* Stopwatch display */
 .time p {
   font-size: 70px;
-  font-weight: 1000;
+  font-weight: 900;
   background-color: #09A1E8;
   color: white;
   padding: 15px 40px;
   border-radius: 12px;
   text-align: center;
-
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   min-width: 300px;
 }
 
-/* Buttons container */
+/* Buttons row */
 .btn {
   display: flex;
-  justify-content: center;
+  gap: 20px;
   margin-top: 30px;
-  gap: 20px; /* equal spacing between buttons */
 }
 
 /* Buttons styling */
@@ -58,28 +63,17 @@ button {
   border-radius: 10px;
   padding: 10px 25px;
   cursor: pointer;
-  transition: transform 0.2s ease;
+  transition: transform 0.15s ease;
 }
+button:hover { transform: scale(1.05); }
+.start { background-color: green; }
+.stop  { background-color: red; }
+.reset { background-color: #B026FF; }
 
-button:hover {
-  transform: scale(1.1);
-}
-
-.start {
-  background-color: green;
-}
-
-.stop {
-  background-color: red;
-}
-
-.reset {
-  background-color: #B026FF;
-}
-
-/* Footer */
+/* Footer pinned to bottom of page */
 footer {
+  margin-top: auto;   /* THIS pushes the footer to the bottom */
+  padding: 18px 0;
   font-size: 15px;
-  margin-top: 80px;
   color: white;
 }
