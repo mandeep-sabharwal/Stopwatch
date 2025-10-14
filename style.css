@@ -1,0 +1,53 @@
+body {
+    font-size: 70px;
+    align-items: center;
+    justify-items: center;
+    background-color: black;
+    color: white;
+    margin-bottom: 0px;
+}
+p {
+    font-weight: 1000;
+    background-color: #09A1E8;
+    padding: 6px 14px 6px 14px;
+    border-radius: 12px;
+}
+
+.btn{
+    margin-left: 0px;
+    margin-top: 0px;
+}
+
+button{
+    margin-top: 0px;
+    margin: 0 10px 0 10px;
+    color: white;
+    border: none;
+    font-size: 20px;
+    border-radius: 10px;
+    padding: 10px;
+    font-weight: 1000;
+}
+
+.start{
+    background-color: green;
+}
+
+.stop {
+    background-color: red;
+}
+
+.reset {
+    background-color: #B026FF;
+}
+
+h1 {
+    font-size: 70%;
+    font-weight: 1000;
+}
+
+footer {
+    font-size: 15px;
+    vertical-align: 100px;
+    text-justify: left;
+}
