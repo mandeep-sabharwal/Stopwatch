@@ -9,9 +9,6 @@ let m = 0;
 let toggle = null;
 
 start.addEventListener('click',function () {
-    if (toggle !== null){
-      clearInterval(toggle);
-    }
     toggle = setInterval(starttime,10)
 })
 
@@ -43,4 +40,4 @@ function starttime(){
 
     timer.innerHTML = `${msss}:${ss}:${mss}`;
 
-  }
+}
